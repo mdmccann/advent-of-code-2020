@@ -14,7 +14,7 @@ public class DayOne {
     Set<Integer> expenseReportSet = new HashSet<>(expenseReport);
     return expenseReport.stream()
         .filter(item -> expenseReportSet.contains(targetSum - item))
-        .map(item -> item * targetSum - item)
+        .map(item -> item * (targetSum - item))
         .findFirst().orElseThrow(() -> new RuntimeException("Could not find two entries which match conditions."));
   }
 
@@ -31,7 +31,7 @@ public class DayOne {
       expenseReportSet.remove(a);
       Optional<Integer> bAndCProduct = expenseReport.stream()
           .filter(b -> expenseReportSet.contains(targetInnerSum - b))
-          .map(b -> b * targetInnerSum - b)
+          .map(b -> b * (targetInnerSum - b))
           .findFirst();
 
       if (bAndCProduct.isPresent()) {
