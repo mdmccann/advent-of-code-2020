@@ -24,12 +24,12 @@ class DayTwoTest {
   }
 
   @Test
-  void getNumberOfValidPasswords_partOne() {
+  void getNumberOfValidPasswords() {
     assertEquals(4, dayTwo.getNumberOfValidPasswords(INPUT));
   }
 
   @Test
-  void findTwoEntriesWhereSumEquals_PartTwo() {
+  void getNumberOfValidPasswordsForNewPolicy() {
     assertEquals(2, dayTwo.getNumberOfValidPasswordsForNewPolicy(INPUT));
   }
 

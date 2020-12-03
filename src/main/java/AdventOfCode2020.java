@@ -14,6 +14,17 @@ public class AdventOfCode2020 {
     System.out.println("** Part Two result: " + dayTwo.getNumberOfValidPasswordsForNewPolicy(dayTwo.getInput()));
     System.out.println();
 
+    DayThree dayThree = new DayThree();
+    System.out.println("* Day Two");
+    System.out.println("** Part One result: " + dayThree.getNumberOfTreesEncountered(dayThree.getInput(), 3, 1, 0, 0));
+    System.out.println("** Part Two result: " + dayThree.getNumberOfTreesEncountered(dayThree.getInput(), 1, 1, 0, 0) *
+        dayThree.getNumberOfTreesEncountered(dayThree.getInput(), 3, 1, 0, 0) *
+        dayThree.getNumberOfTreesEncountered(dayThree.getInput(), 5, 1, 0, 0) *
+        dayThree.getNumberOfTreesEncountered(dayThree.getInput(), 7, 1, 0, 0) *
+        dayThree.getNumberOfTreesEncountered(dayThree.getInput(), 1, 2, 0, 0));
+    System.out.println();
+
+
   }
 
 }
