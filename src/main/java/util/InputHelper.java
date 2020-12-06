@@ -16,6 +16,16 @@ public class InputHelper {
     this.day = day;
   }
 
+  public String asString() {
+    String file = String.format("day%d-input.txt", this.day);
+    try {
+      Path path = Paths.get(Objects.requireNonNull(getClass().getClassLoader().getResource(file)).toURI());
+      return Files.readString(path);
+    } catch (Exception e) {
+      throw new IllegalArgumentException("Cannot read input");
+    }
+  }
+
   public Stream<String> asStringStream() {
     String file = String.format("day%d-input.txt", this.day);
     try {

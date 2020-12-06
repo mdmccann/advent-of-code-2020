@@ -2,6 +2,7 @@ import days.Day;
 import days.DayFive;
 import days.DayFour;
 import days.DayOne;
+import days.DaySix;
 import days.DayThree;
 import days.DayTwo;
 
@@ -15,7 +16,9 @@ public class AdventOfCode2020 {
       new DayTwo(),
       new DayThree(),
       new DayFour(),
-      new DayFive());
+      new DayFive(),
+      new DaySix()
+  );
 
   public static void main(String[] args) {
 
