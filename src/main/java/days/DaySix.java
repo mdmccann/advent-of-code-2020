@@ -3,7 +3,6 @@ package days;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -12,52 +11,29 @@ public class DaySix implements Day {
   @Override
   public Object partOne() {
     List<String> allGroupAnswers = Day.getInputHelper(6).asStringList();
+    Iterator<String> individualResponseIterator = allGroupAnswers.iterator();
+    int total = 0;
 
-    List<String> groupAnswers = new LinkedList<>();
-    StringBuilder sb = new StringBuilder();
+    while (individualResponseIterator.hasNext()) {
 
-    for (String str : allGroupAnswers) {
-      if (!str.trim().equals("")) {
-        sb.append(str);
-      } else {
-        groupAnswers.add(sb.toString().trim());
-        sb = new StringBuilder();
+      Set<Character> groupQuestionsAnsweredYes = new HashSet<>();
+      String line = individualResponseIterator.next();
+
+      while (!line.trim().equals("")) {
+        for (char questionAnsweredYes : line.toCharArray()) {
+          groupQuestionsAnsweredYes.add(questionAnsweredYes);
+        }
+
+        if (!individualResponseIterator.hasNext()) {
+          break;
+        }
+
+        line = individualResponseIterator.next();
       }
+      total += groupQuestionsAnsweredYes.size();
     }
 
-    return groupAnswers.stream().map(str -> {
-      Set<Character> charSet = new HashSet<>();
-      char[] chars = str.toCharArray();
-      for (char ch : chars) {
-        charSet.add(ch);
-      }
-      return charSet.size();
-    }).reduce(Integer::sum).get();
-
-//    Iterator<String> individualResponseIterator = allGroupAnswers.iterator();
-//    int total = 0;
-//
-//    while (individualResponseIterator.hasNext()) {
-//
-//      Set<Character> groupQuestionsAnsweredYes = new HashSet<>();
-//      String line = individualResponseIterator.next();
-//
-//      while (!line.trim().equals("")) {
-//        for (char questionAnsweredYes: line.toCharArray()) {
-//          groupQuestionsAnsweredYes.add(questionAnsweredYes);
-//        }
-//
-//        if (!individualResponseIterator.hasNext()) {
-//          break;
-//        }
-//
-//        line = individualResponseIterator.next();
-//      }
-//
-//      total += groupQuestionsAnsweredYes.size();
-//    }
-//
-//    return total;
+    return total;
   }
 
   @Override
