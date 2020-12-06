@@ -32,6 +32,12 @@ public class AdventOfCode2020 {
     System.out.println("** Part Two result: " + dayFour.getNumberOfValidPassports(dayFour.getInput(), Set.of("ecl", "pid", "eyr", "hcl", "byr", "iyr", "hgt")));
     System.out.println();
 
+    DayFive dayFive = new DayFive();
+    System.out.println("* Day Five");
+    System.out.println("** Part One result: " + dayFive.getHighestSeatId(dayFive.getInput()));
+    System.out.println("** Part Two result: " + dayFive.getMissingSeatId(dayFive.getInput()));
+    System.out.println();
+
   }
 
 }
