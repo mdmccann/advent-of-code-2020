@@ -44,9 +44,9 @@ public class DayEight implements Day {
 
       String[] modified = Arrays.copyOf(instructions, instructions.length);
 
-      if (instructions[i].substring(0, 3).equals("nop")) {
+      if (instructions[i].substring(0, 3).equals("nop") && !instructions[i].substring(4).equals("+0")) {
         modified[i] = instructions[i].replace("nop", "jmp");
-      } else if (instructions[i].substring(0, 3).equals("jmp")) {
+      } else if (instructions[i].substring(0, 3).equals("jmp") && !instructions[i].substring(4).equals("+0")) {
         modified[i] = instructions[i].replace("jmp", "nop");
       }
 
