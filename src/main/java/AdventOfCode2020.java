@@ -1,4 +1,5 @@
 import days.Day;
+import days.DayEight;
 import days.DayFive;
 import days.DayFour;
 import days.DayOne;
@@ -17,7 +18,9 @@ public class AdventOfCode2020 {
       new DayThree(),
       new DayFour(),
       new DayFive(),
-      new DaySix()
+      new DaySix(),
+
+      new DayEight()
   );
 
   public static void main(String[] args) {
