@@ -42,6 +42,12 @@ public class InputHelper {
         .collect(Collectors.toList());
   }
 
+  public List<Long> asLongList() {
+    return asStringStream()
+        .map(Long::parseLong)
+        .collect(Collectors.toList());
+  }
+
   public List<String> asStringList() {
     return asStringStream()
         .collect(Collectors.toList());
