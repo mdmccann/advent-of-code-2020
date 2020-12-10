@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class DaySix implements Day {
+public class Day06 implements Day {
   @Override
   public Object partOne() {
     List<String> allGroupAnswers = Day.getInputHelper(6).asStringList();

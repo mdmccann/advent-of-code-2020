@@ -3,7 +3,7 @@ package days;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class DayFive implements Day {
+public class Day05 implements Day {
 
   @Override
   public Object partOne() {

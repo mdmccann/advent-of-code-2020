@@ -1,12 +1,12 @@
 import days.Day;
+import days.Day01;
+import days.Day02;
+import days.Day03;
+import days.Day04;
+import days.Day05;
+import days.Day06;
+import days.Day08;
 import days.Day09;
-import days.DayEight;
-import days.DayFive;
-import days.DayFour;
-import days.DayOne;
-import days.DaySix;
-import days.DayThree;
-import days.DayTwo;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,14 +14,14 @@ import java.util.List;
 public class AdventOfCode2020 {
 
   private static final List<Day> COMPLETED_DAYS = Arrays.asList(
-      new DayOne(),
-      new DayTwo(),
-      new DayThree(),
-      new DayFour(),
-      new DayFive(),
-      new DaySix(),
+      new Day01(),
+      new Day02(),
+      new Day03(),
+      new Day04(),
+      new Day05(),
+      new Day06(),
 
-      new DayEight(),
+      new Day08(),
       new Day09()
   );
 

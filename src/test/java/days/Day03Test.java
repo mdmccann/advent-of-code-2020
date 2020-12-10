@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DayThreeTest {
+public class Day03Test {
 
-  private DayThree dayThree;
+  private Day03 day03;
 
   @BeforeEach
   void setup() {
-    dayThree = new DayThree();
+    day03 = new Day03();
   }
 
   @Test
   void getNumberOfTreesEncountered() {
-    assertEquals(7, dayThree.getNumberOfTreesEncountered(3, 1, 0, 0));
+    assertEquals(7, day03.getNumberOfTreesEncountered(3, 1, 0, 0));
   }
 }

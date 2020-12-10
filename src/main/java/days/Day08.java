@@ -2,7 +2,7 @@ package days;
 
 import java.util.Arrays;
 
-public class DayEight implements Day {
+public class Day08 implements Day {
   @Override
   public Object partOne() {
     String[] instructions = Day.getInputHelper(8).asString().split("\r\n");

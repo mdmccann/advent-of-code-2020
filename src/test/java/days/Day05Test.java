@@ -5,18 +5,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class DayFiveTest {
+class Day05Test {
 
-  private DayFive dayFive;
+  private Day05 day05;
 
   @BeforeEach
   void setUp() {
-    dayFive = new DayFive();
+    day05 = new Day05();
   }
 
   @Test
   void getSeatID() {
-    assertEquals(357, dayFive.getSeatID("FBFBBFFRLR"));
+    assertEquals(357, day05.getSeatID("FBFBBFFRLR"));
   }
 
 }

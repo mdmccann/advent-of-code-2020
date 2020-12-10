@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-public class DayOne implements Day {
+public class Day01 implements Day {
 
   private static final int TARGET_SUM = 2020;
 

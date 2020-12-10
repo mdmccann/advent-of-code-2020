@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 
-public class DayFour implements Day {
+public class Day04 implements Day {
 
   private static final Set<String> REQUIRED_FIELDS = Set.of("ecl", "pid", "eyr", "hcl", "byr", "iyr", "hgt");
   private static final Map<String, Predicate<String>> RULES = Map.of(

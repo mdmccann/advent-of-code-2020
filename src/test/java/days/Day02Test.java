@@ -5,23 +5,23 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class DayFourTest {
+class Day02Test {
 
-  private DayFour dayFour;
+  private Day02 day02;
 
   @BeforeEach
   void setup() {
-    dayFour = new DayFour();
+    day02 = new Day02();
   }
 
   @Test
   void partOne() {
-    assertEquals(4, dayFour.partOne());
+    assertEquals(4, day02.partOne());
   }
 
   @Test
   void partTwo() {
-    assertEquals(3, dayFour.partTwo());
+    assertEquals(2, day02.partTwo());
   }
 
 }

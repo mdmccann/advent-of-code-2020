@@ -1,6 +1,6 @@
 package days;
 
-public class DayTwo implements Day {
+public class Day02 implements Day {
 
   @Override
   public Object partOne() {
