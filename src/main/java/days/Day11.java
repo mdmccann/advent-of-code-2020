@@ -29,19 +29,19 @@ public class Day11 implements Day {
 
         int occupiedCount = 0;
 
-        for (int adjRow = Math.max(row - 1, 0); adjRow <= Math.min(row + 1, seatPlan[0].length - 1); adjRow++) {
-          for (int adjCol = Math.max(row - 1, 0); adjCol <= Math.min(row + 1, seatPlan.length - 1); adjCol++) {
-            if (!(adjRow == row && adjCol == row) && seatPlan[adjCol][adjRow] == '#') {
+        for (int adjCol = Math.max(col - 1, 0); adjCol <= Math.min(col + 1, seatPlan[0].length - 1); adjCol++) {
+          for (int adjRow = Math.max(row - 1, 0); adjRow <= Math.min(row + 1, seatPlan.length - 1); adjRow++) {
+            if (!(adjRow == row && adjCol == col) && seatPlan[adjRow][adjCol] == '#') {
               occupiedCount++;
             }
           }
         }
 
-        if (seatPlan[row][row] == 'L' && occupiedCount == 0) {
-          newSeatPlan[row][row] = '#';
+        if (seatPlan[row][col] == 'L' && occupiedCount == 0) {
+          newSeatPlan[row][col] = '#';
           changes++;
-        } else if (seatPlan[row][row] == '#' && occupiedCount >= 4) {
-          newSeatPlan[row][row] = 'L';
+        } else if (seatPlan[row][col] == '#' && occupiedCount >= 4) {
+          newSeatPlan[row][col] = 'L';
           changes++;
         }
       }
