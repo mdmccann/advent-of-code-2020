@@ -1,28 +1,26 @@
 package days;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Day08Test {
+class Day12Test {
 
-  private Day08 day08;
+  private Day12 day12;
 
   @BeforeEach
   void setUp() {
-    day08 = new Day08();
+    day12 = new Day12();
   }
 
   @Test
-  @Disabled("Broken on GitHub")
   void partOne() {
-    assertEquals(5, day08.partOne());
+    assertEquals(25, day12.partOne());
   }
 
   @Test
   void partTwo() {
-    assertEquals(8, day08.partTwo());
+    assertEquals(286, day12.partTwo());
   }
 }
