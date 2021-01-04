@@ -10,6 +10,7 @@ import days.Day09;
 import days.Day10;
 import days.Day11;
 import days.Day12;
+import days.Day13;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +29,8 @@ public class AdventOfCode2020 {
       new Day09(),
       new Day10(),
       new Day11(),
-      new Day12()
+      new Day12(),
+      new Day13()
   );
 
   public static void main(String[] args) {
